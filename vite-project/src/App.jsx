@@ -1,27 +1,19 @@
 import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx'
 
 export function App () {
-    return (
+   const formatUserName = (userName) => '@${userName}'
+   return(
+      <section className='App'>
+      <TwitterFollowCard formatUserName ={formatUserName} name="Juan Carlos" username="jotacee" isFollowing/>
+      <TwitterFollowCard formatUserName ={formatUserName} name="Juan Carlos" username="jotacee" isFollowing/>
 
-        <article className='tw-followCard'>
-        <header className='tw-followCard-header'>
-            <img className='tw-followCard-avatar' alt="avatar de midulive" src="https://unavatar.io/baner.png" />
-            <div className='tw-followCard-info'>   <strong >JuanCarlos</strong>
-                    <span className='tw-followCard-infoUserName'>@jotasee</span>  
-            
-            </div>
-        </header>
+      
+      </section> 
+   
 
-        <aside>
-            <button className='tw-followCard-button'>
-                Seguir
-            </button>
-        </aside>
-
-
-    </article>   
-    )
+   )
        
         
-    
+   
 }
